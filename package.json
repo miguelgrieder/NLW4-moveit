@@ -1,5 +1,5 @@
 {
-  "name": "moveit",
+  "name": "nlw4_moveit",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
