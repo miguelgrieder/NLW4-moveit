@@ -1,0 +1,68 @@
+.overlay{
+    background: rgba(242, 243, 245, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background: var(--white);
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+}
+
+.container > div{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.container > div > p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container > div > button{
+    width: 15%;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+
+    border: 0;
+    border-radius: 5px;
+
+    background: var(--blue);
+    color: var(--white);
+    transition: 0.2s;
+
+}
+
+.container > div > button:hover{
+    background: var(--green);
+    color: var(--white);
+}
+
+.container > button{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background: transparent;
+    border: 0;
+    font-size: 0px;
+}
