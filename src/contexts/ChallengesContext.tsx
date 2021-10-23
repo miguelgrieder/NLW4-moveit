@@ -18,6 +18,7 @@ interface ChallengesContextData{
     activeChallenge: Challenge;
     levelUp: () => void;
     startNewChallenge: () => void;
+    completedCountdown: (cicleDuration) => void;
     resetChallenge: () => void;
     completedChallenge: () => void;
     closeLevelUpModal: () => void;
@@ -60,12 +61,24 @@ export function ChallengesProvider({children, ...rest}: ChallengesProviderProps)
         setIsLevelUpModalOpen(false);
     }
 
+    function completedCountdown(cicleDuration){
+        let finalExperience = Math.ceil(currentExperience + cicleDuration/60);
+
+        if(finalExperience >= experienceToNextLevel){
+            finalExperience = finalExperience - experienceToNextLevel
+            levelUp();
+        }
+        setCurrentExperience(finalExperience);
+        startNewChallenge();
+    }
+
     function startNewChallenge(){
         const randomChallengeIndex = Math.floor(Math.random() * challenges.length)
         const challenge = challenges[randomChallengeIndex];
 
         setActiveChallenge(challenge)
     }
+
 
     function resetChallenge(){
         setActiveChallenge(null)
@@ -77,7 +90,7 @@ export function ChallengesProvider({children, ...rest}: ChallengesProviderProps)
         }
         const {amount} = activeChallenge;
 
-        let finalExperience = currentExperience + amount;
+        let finalExperience = Math.ceil(currentExperience + amount);
 
         if(finalExperience >= experienceToNextLevel){
             finalExperience = finalExperience - experienceToNextLevel
@@ -90,7 +103,7 @@ export function ChallengesProvider({children, ...rest}: ChallengesProviderProps)
     
 
     return(
-        <ChallengesContext.Provider value={{level, currentExperience, challengesCompleted, activeChallenge, experienceToNextLevel, levelUp, closeLevelUpModal, startNewChallenge, resetChallenge, completedChallenge }}>
+        <ChallengesContext.Provider value={{level, currentExperience, challengesCompleted, activeChallenge, experienceToNextLevel, levelUp, closeLevelUpModal, completedCountdown, startNewChallenge, resetChallenge, completedChallenge }}>
             {children}
             { isLevelUpModalOpen && <LevelUpModal/>}
         </ChallengesContext.Provider>

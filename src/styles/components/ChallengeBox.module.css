@@ -40,6 +40,8 @@
     margin-bottom: 1rem;
 }
 
+
+
 .challengeActive{
     height: 100%;
     display: flex;
@@ -107,4 +109,34 @@
 
 .challengeActive footer button:hover{
     filter: brightness(0.9);
+}
+
+
+.countdownActive {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdownActive header{
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0 2rem 1.5rem;
+    border-bottom: 1px solid var(--gray-line);
+}
+
+.countdownActive img{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    max-width: 50%;
+}
+
+.countdownActive strong {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--title);
+    margin: 3rem 0 3rem;
 }

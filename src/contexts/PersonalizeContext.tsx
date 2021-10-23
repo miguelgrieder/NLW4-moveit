@@ -32,8 +32,8 @@ export function PersonalizeProvider({children, ...rest}: PersonalizeProviderProp
     }, [username])
 
     useEffect(() => {
-        if (username==='Cliente'){
-        setIsPersonalizeModalOpen(true);}
+        if (username === "undefined"){
+            setUsername('Cliente');}
     }, [])
 
     function openPersonalizeModal(){

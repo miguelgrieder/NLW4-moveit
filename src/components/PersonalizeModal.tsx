@@ -16,12 +16,9 @@ export function PersonalizeModal() {
   };
 
   function getUsername() {
-    const usernameBig = document.querySelector('input').value;
-    var length = 20;
-    var username = usernameBig.substring(0, length);
-
-
-    changeUsername(username);
+    const username = document.querySelector('input').value;
+    if(username.length > 0){
+    changeUsername(username);}
   }
 
     return(
@@ -35,7 +32,7 @@ export function PersonalizeModal() {
             <button type="button" name="45"onClick={buttonHandler}>45</button>
             <button type="button" name="0.1"onClick={buttonHandler}>0.1</button></div>
             
-            <div> <p> Nome do perfil:</p><input type="text" placeholder={username}/> <button type="button" onClick={getUsername}>OK</button> </div>
+            <div> <p> Nome do perfil:</p><input type="text" placeholder={username} maxLength={15}/> <button type="button" onClick={getUsername}>OK</button> </div>
 
               <button type="button"  onClick={closePersonalizeModal}>
                 <img src="/icons/close.svg" alt="Fechar modal" />

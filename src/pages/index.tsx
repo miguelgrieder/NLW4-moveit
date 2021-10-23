@@ -29,7 +29,7 @@ export default function Home(props: HomeProps) {
     <div className={styles.container}>
         
         <Head>
-          <title>Início</title>  
+          <title>Moveit</title>  
         </Head>
         <ExperienceBar />
         <CountdownProvider cicleDuration={props.cicleDuration}>

@@ -6,9 +6,7 @@ import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <PersonalizeProvider> 
       <Component {...pageProps} />
-    </PersonalizeProvider>
 )};
 
 export default MyApp
