@@ -16,7 +16,8 @@ import { PersonalizeProvider } from "../contexts/PersonalizeContext";
 
 interface HomeProps{level: number;
    currentExperience: number;
-   challengesCompleted: number;}
+   challengesCompleted: number;
+   cicleDuration: number;}
 
 export default function Home(props: HomeProps) {
   return (
@@ -30,7 +31,7 @@ export default function Home(props: HomeProps) {
           <title>Início</title>  
         </Head>
         <ExperienceBar />
-        <CountdownProvider>
+        <CountdownProvider cicleDuration={props.cicleDuration}>
         <PersonalizeProvider>
       <section>
           <div>
