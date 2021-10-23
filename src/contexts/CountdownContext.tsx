@@ -27,7 +27,7 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({children, ...rest}: CountdownProviderProps){
     const {startNewChallenge} = useContext(ChallengesContext)
-    const [cicleDuration, setCicleDuration] = useState(rest.cicleDuration ?? 25*60);//AQUI NÃO FUNCIONA O REST
+    const [cicleDuration, setCicleDuration] = useState(rest.cicleDuration ?? 25*60);
     const [time, setTime] = useState(cicleDuration);
     const [isActive, setIsActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);

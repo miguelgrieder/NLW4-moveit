@@ -31,6 +31,11 @@ export function PersonalizeProvider({children, ...rest}: PersonalizeProviderProp
         Cookies.set('username', String(username));
     }, [username])
 
+    useEffect(() => {
+        if (username==='Cliente'){
+        setIsPersonalizeModalOpen(true);}
+    }, [])
+
     function openPersonalizeModal(){
         setIsPersonalizeModalOpen(true)
     }

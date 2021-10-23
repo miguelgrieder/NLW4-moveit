@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { PersonalizeProvider } from '../contexts/PersonalizeContext';
 import '../styles/global.css';
 //Sempre carregado e renderizado a cada nova pagina
@@ -5,7 +6,9 @@ import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
+    <PersonalizeProvider> 
       <Component {...pageProps} />
+    </PersonalizeProvider>
 )};
 
 export default MyApp
