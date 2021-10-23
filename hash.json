@@ -1,0 +1,19 @@
+[
+    {
+      "hash": "tewstsdfgsdgsdgsdgsdgs",
+      "name": "Estique um de seus braços com a palma da mão virada para frente e puxe os dedos para cima por 10 segundos por mão.",
+      "level": 80,
+      "xp": 80,
+      "photo": 80,
+      "completedchlg": 80
+    },
+
+    {
+        "hash": "tewstsdfgsdgsdgsdgsdgs",
+        "name": "Estique um de seus braços com a palma da mão virada para frente e puxe os dedos para cima por 10 segundos por mão.",
+        "level": 80,
+        "xp": 80,
+        "photo": "imgs",
+        "completedchlg": 80
+      }
+]

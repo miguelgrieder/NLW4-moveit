@@ -17,7 +17,8 @@ import { PersonalizeProvider } from "../contexts/PersonalizeContext";
 interface HomeProps{level: number;
    currentExperience: number;
    challengesCompleted: number;
-   cicleDuration: number;}
+   cicleDuration: number;
+   username: string}
 
 export default function Home(props: HomeProps) {
   return (
@@ -32,7 +33,7 @@ export default function Home(props: HomeProps) {
         </Head>
         <ExperienceBar />
         <CountdownProvider cicleDuration={props.cicleDuration}>
-        <PersonalizeProvider>
+        <PersonalizeProvider username={props.username}>
       <section>
           <div>
               <Profile/>
@@ -54,12 +55,13 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted, cicleDuration} = ctx.req.cookies;
+  const { level, currentExperience, challengesCompleted, cicleDuration, username} = ctx.req.cookies;
   return{
     props: {level: Number(level),
       currentExperience: Number(currentExperience), 
       challengesCompleted: Number(challengesCompleted),
       cicleDuration: Number(cicleDuration),
+      username: String(username)
     }
   }
 }
