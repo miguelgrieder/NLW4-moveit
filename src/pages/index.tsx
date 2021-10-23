@@ -34,6 +34,8 @@ export default function Home(props: HomeProps) {
         <ExperienceBar />
         <CountdownProvider cicleDuration={props.cicleDuration}>
         <PersonalizeProvider username={props.username}>
+
+
       <section>
           <div>
               <Profile/>
@@ -41,14 +43,14 @@ export default function Home(props: HomeProps) {
             <Countdown/>
           </div>
 
+
           <div>
             <ChallengeBox/>
           </div>
           
       </section>
       </PersonalizeProvider>
-      </CountdownProvider>
-      
+      </CountdownProvider>  
     </div>
     </ChallengesProvider>
   )
