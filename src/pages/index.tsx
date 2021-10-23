@@ -10,7 +10,7 @@ import { GetServerSideProps } from 'next'
 import styles from '../styles/pages/Home.module.css';
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
-import { PersonalizarProvider } from "../contexts/PersonalizarContext";
+import { PersonalizeProvider } from "../contexts/PersonalizeContext";
 
 //Pagina inicial
 
@@ -25,36 +25,40 @@ export default function Home(props: HomeProps) {
     currentExperience={props.currentExperience}
     challengesCompleted={props.challengesCompleted}>
     <div className={styles.container}>
-      <PersonalizarProvider>
-      <Head>
-      <title>Início</title>  
-      </Head>
-    <ExperienceBar />
-    <CountdownProvider>
-    <section>
-      <div>
-          <Profile/>
-        <CompletedChallenges/>
-        <Countdown/>
-      </div>
+        
+        <Head>
+          <title>Início</title>  
+        </Head>
+        <ExperienceBar />
+        <CountdownProvider>
+        <PersonalizeProvider>
+      <section>
+          <div>
+              <Profile/>
+            <CompletedChallenges/>
+            <Countdown/>
+          </div>
 
-      <div>
-        <ChallengeBox/>
-      </div>
+          <div>
+            <ChallengeBox/>
+          </div>
+          
+      </section>
+      </PersonalizeProvider>
+      </CountdownProvider>
       
-    </section>
-    </CountdownProvider>
-    </PersonalizarProvider>
     </div>
     </ChallengesProvider>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted} = ctx.req.cookies;
+  const { level, currentExperience, challengesCompleted, cicleDuration} = ctx.req.cookies;
   return{
     props: {level: Number(level),
       currentExperience: Number(currentExperience), 
-      challengesCompleted: Number(challengesCompleted)}
+      challengesCompleted: Number(challengesCompleted),
+      cicleDuration: Number(cicleDuration),
+    }
   }
 }

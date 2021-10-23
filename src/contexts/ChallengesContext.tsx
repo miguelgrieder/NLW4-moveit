@@ -24,7 +24,7 @@ interface ChallengesContextData{
 }
 
 interface ChallengesProviderProps {
-    children: ReactNode
+    children: ReactNode;
     level: number;
     currentExperience: number;
     challengesCompleted: number;
