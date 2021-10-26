@@ -1,43 +1,48 @@
 .profileContainer{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.profileContainer > img {
+.profileContainer > div {
+    display: flex;
+    align-items: center;
+}
+
+.profileContainer div > img {
     width: 5.5rem;
     height: 5.5rem;
     border-radius: 50%;
 }
 
-.profileContainer div {
+.profileContainer div div {
     margin-left: 1.5rem;
 }
 
 
 
-.profileContainer div p {
+.profileContainer div div p {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
 
 
-.profileContainer div p img {
+.profileContainer div div p img {
     margin-right: 0.5rem;
 }
 
-.profileContainer div strong {
+.profileContainer div div strong {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--title); 
 }
 
-.profileContainer div strong button {
+.profileContainer span button {
+    background: transparent;
     border: 0;
-    
     display: inline-block;
 }
 
-.profileContainer div strong button img {
-    
-    height: 1.2rem;
+.profileContainer span button img {
+    height: 1.5rem;
 }

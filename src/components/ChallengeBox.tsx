@@ -47,10 +47,10 @@ export function ChallengeBox(){
                         </div>
                  ) : (
                     <div className={styles.challengeNotActive}>
-                        <strong>Realize um ciclo</strong>
+                        <strong>Realize um ciclo de estudo ou trabalho</strong>
                             <p>
                                 <img src="icons/level-up.svg" alt="Level Up" />
-                                Ganhe xp completando ciclos e desafios
+                                Durante o tempo do cronômetro não se distraía
                             </p>
                     </div>)}
                 </>
