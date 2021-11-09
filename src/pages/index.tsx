@@ -12,6 +12,8 @@ import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
 import { PersonalizeProvider } from "../contexts/PersonalizeContext";
 
+
+
 //Pagina inicial
 
 interface HomeProps{level: number;

@@ -14,7 +14,7 @@ export function Profile() {
     return (
         <div className={styles.profileContainer}>
             <div>
-                <img src="https://scontent.ffln10-1.fna.fbcdn.net/v/t1.6435-9/241075066_1029601827814642_6829893930135403273_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEKIv9QOH5siz-v5_N7193GhsGyNPwWGN-GwbI0_BYY3zLfh_fdEQXzaGbEUNs0y7YtZg6KaRVpNWNqZj7WiJ7D&_nc_ohc=Qc7bYkBbtuMAX9gRHoL&_nc_oc=AQl-wSn_IgiRwCfuqkUCSAH_mjk8aANPHe6ZsYVnPPMokDmRCEyibDyckd1RnjxFO1U&_nc_ht=scontent.ffln10-1.fna&oh=3616a94713ac52dce7c183372dc03c94&oe=61847285" alt="profile_img" />
+                <img src="https://ih1.redbubble.net/image.379601685.6062/st,small,507x507-pad,600x600,f8f8f8.u7.jpg" alt="profile_img" />
                 <div>
                     <strong>
                         <span> 
